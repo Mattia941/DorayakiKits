@@ -96,11 +96,15 @@ public final class KitPlugin extends JavaPlugin implements CommandExecutor, List
             ItemStack clicked = event.getCurrentItem();
 
             if (clicked.hasItemMeta() && clicked.getItemMeta().hasLore()) {
-                for (String line : clicked.getItemMeta().hasLore()) {
-                    if (line.contains("ID: kit")) {
-                        String kitId = line.replace("ID: kit", "").trim();
-                        player.sendMessage(colorize("&2&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &aHai riscattato il kit &e" + kitId + "&a!"));
-                        player.closeInventory();
+                List<String> lore = clicked.getItemMeta().getLore();
+                if (lore != null) {
+                    for (String line : lore) {
+                        String plainLine = ChatColor.stripColor(line);
+                        if (plainLine != null && plainLine.contains("ID: kit")) {
+                            String kitId = plainLine.replace("ID: kit", "").trim();
+                            player.sendMessage(colorize("&2&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &aHai riscattato il kit &e" + kitId + "&a!"));
+                            player.closeInventory();
+                        }
                     }
                 }
             }
