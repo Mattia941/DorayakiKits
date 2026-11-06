@@ -1,4 +1,5 @@
-# Lista dei mondi in cui è permesso usare il comando /kit
+# DorayakiMC Kits Configuration
+
 allowed-worlds:
   - world
   - survival
@@ -6,3 +7,30 @@ allowed-worlds:
 
 messages:
   world-blocked: "&c&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &cNon puoi usare i kit in questo mondo!"
+  no-permission: "&c&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &cNon hai il permesso per questo kit!"
+  cooldown-active: "&c&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &cDevi aspettare ancora %time% prima di riusare questo kit!"
+  kit-claimed: "&2&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &aHai riscattato il kit &e%kit%&a!"
+
+# Configurazione dettagliata dei Kit
+kits:
+  kit1:
+    display-name: "&a&lᴋɪᴛ ɪɴɪᴢɪᴀʟᴇ"
+    slot: 10
+    icon: EMERALD
+    permission: "dorayakimc.kit.user"
+    cooldown: 3600 # tempo in secondi (es. 3600 = 1 ora)
+    items: [] # Si popola da solo via /kit editor o a mano
+  kit2:
+    display-name: "&a&lᴋɪᴛ ᴠɪᴘ"
+    slot: 12
+    icon: DIAMOND
+    permission: "dorayakimc.kit.vip"
+    cooldown: 86400 # 24 ore
+    items: []
+  kit3:
+    display-name: "&a&lᴋɪᴛ ᴍᴇɢᴀ"
+    slot: 14
+    icon: NETHERITE_INGOT
+    permission: "dorayakimc.kit.mega"
+    cooldown: 43200
+    items: []
