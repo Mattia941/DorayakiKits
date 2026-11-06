@@ -1,11 +1,9 @@
 name: DorayakiKits
-version: 1.0
+version: 1.1
 main: com.dorayakimc.kits.KitPlugin
 api-version: '1.21'
 commands:
   kit:
-    description: Apre il menu dei kit di DorayakiMC
+    description: Comandi principali per i Kit di DorayakiMC
     permission: dorayakimc.kit
-  kitsreload:
-    description: Ricarica i kit
-    permission: dorayakimc.admin
+    usage: /kit [editor/reload]
