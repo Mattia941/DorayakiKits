@@ -1,0 +1,8 @@
+# Lista dei mondi in cui è permesso usare il comando /kit
+allowed-worlds:
+  - world
+  - survival
+  - lobby
+
+messages:
+  world-blocked: "&c&l[ᴅᴏʀᴀʏᴀᴋɪᴍᴄ] &cNon puoi usare i kit in questo mondo!"
